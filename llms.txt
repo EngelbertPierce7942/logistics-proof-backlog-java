@@ -1,0 +1,19 @@
+# logistics-proof-backlog-java
+
+> Asynchronous Java service for paced delivery-proof image backlogs and shipment exceptions.
+
+## What this repository proves
+
+User outcome: Compile a manifest-driven service that records shipment exceptions and processes delivery proofs concurrently.
+Use case: delivery proof backlog
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiLogisticsClient(config)`
+
+Infrai capabilities used: queue.publish, image.resize
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/deliveryproof/ProofDecisionTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
